@@ -1,0 +1,1341 @@
+/* =========================================================
+   CONCRETE BASE BRAND SYSTEM
+   PREMIUM CONSTRUCTION WEBSITE
+   PART 1
+========================================================= */
+
+
+/* =========================================================
+   ROOT VARIABLES
+========================================================= */
+
+:root{
+
+    /* Brand Colours */
+    --brand-primary:#0B6623;
+    --brand-primary-dark:#084817;
+    --brand-primary-light:#128033;
+
+    --brand-bg:#D9DDDC;
+    --brand-white:#ffffff;
+
+    /* Text */
+    --text-main:#1E2421;
+    --text-muted:#5C6460;
+    --text-light:#ffffff;
+
+    /* UI */
+    --border-soft:rgba(11,102,35,.14);
+
+    --shadow-sm:
+    0 8px 24px rgba(0,0,0,.06);
+
+    --shadow-md:
+    0 18px 45px rgba(0,0,0,.10);
+
+    --shadow-lg:
+    0 30px 70px rgba(0,0,0,.14);
+
+
+    /* Shape */
+    --radius-sm:10px;
+    --radius-md:16px;
+    --radius-lg:24px;
+
+
+    /* Layout */
+    --container:1200px;
+
+
+    /* Animation */
+    --transition:
+    all .25s ease;
+
+}
+
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*,
+*::before,
+*::after{
+    box-sizing:border-box;
+}
+
+
+html{
+    scroll-behavior:smooth;
+}
+
+
+body{
+
+    margin:0;
+
+    padding:0;
+
+    background:var(--brand-bg);
+
+    color:var(--text-main);
+
+    font-family:
+    Inter,
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+    line-height:1.7;
+
+    -webkit-font-smoothing:antialiased;
+
+}
+
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+
+button{
+
+    font-family:inherit;
+
+}
+
+
+
+/* =========================================================
+   GLOBAL CONTAINER
+========================================================= */
+
+
+.container{
+
+    width:min(92%, var(--container));
+
+    margin-inline:auto;
+
+}
+
+
+
+/* =========================================================
+   TYPOGRAPHY SYSTEM
+========================================================= */
+
+
+h1,
+h2,
+h3{
+
+    margin-top:0;
+
+    color:var(--text-main);
+
+    line-height:1.15;
+
+    letter-spacing:-0.035em;
+
+}
+
+
+h1{
+
+    font-size:
+    clamp(2.6rem,5vw,4.5rem);
+
+    font-weight:900;
+
+}
+
+
+h2{
+
+    font-size:
+    clamp(2rem,3vw,3rem);
+
+    font-weight:850;
+
+    margin-bottom:28px;
+
+}
+
+
+h3{
+
+    font-size:1.35rem;
+
+    font-weight:800;
+
+}
+
+
+
+p{
+
+    font-size:1.05rem;
+
+    color:var(--text-muted);
+
+    max-width:70ch;
+
+}
+
+
+
+/* =========================================================
+   SECTIONS
+========================================================= */
+
+
+.section{
+
+    padding:100px 0;
+
+}
+
+
+.section + .section{
+
+    border-top:
+    1px solid rgba(0,0,0,.04);
+
+}
+
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+
+.site-header{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    z-index:1000;
+
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+
+    padding:
+    22px clamp(20px,5vw,60px);
+
+
+    background:
+    rgba(217,221,220,.85);
+
+
+    backdrop-filter:
+    blur(12px);
+
+
+    border-bottom:
+    1px solid rgba(0,0,0,.08);
+
+}
+
+
+
+/* Brand */
+
+
+.site-brand a{
+
+    font-size:1.15rem;
+
+    font-weight:900;
+
+    letter-spacing:-.02em;
+
+    color:var(--brand-primary);
+
+}
+
+
+
+/* =========================================================
+   MENU BUTTON
+========================================================= */
+
+
+.menu-toggle{
+
+    width:46px;
+
+    height:46px;
+
+
+    border-radius:50%;
+
+
+    border:none;
+
+
+    background:
+    var(--brand-primary);
+
+
+    color:white;
+
+
+    font-size:1.4rem;
+
+
+    cursor:pointer;
+
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+
+    transition:
+    var(--transition);
+
+}
+
+
+
+.menu-toggle:hover{
+
+    background:
+    var(--brand-primary-dark);
+
+    transform:
+    translateY(-2px);
+
+}
+
+
+
+/* =========================================================
+   SIDE MENU
+========================================================= */
+
+
+.side-menu{
+
+    position:fixed;
+
+    top:0;
+
+    right:-420px;
+
+
+    width:min(90%,400px);
+
+    height:100vh;
+
+
+    background:white;
+
+
+    z-index:1200;
+
+
+    padding:90px 35px;
+
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+
+    box-shadow:
+    var(--shadow-lg);
+
+
+    transition:
+    .35s ease;
+
+}
+
+
+
+.side-menu.active{
+
+    right:0;
+
+}
+
+
+
+.side-menu a,
+.side-menu summary{
+
+    font-weight:700;
+
+    font-size:1.05rem;
+
+    cursor:pointer;
+
+}
+
+
+
+.side-menu details{
+
+    border-bottom:
+
+    1px solid rgba(0,0,0,.08);
+
+    padding-bottom:15px;
+
+}
+
+
+
+.side-menu details a{
+
+    display:block;
+
+    padding:10px 0 10px 15px;
+
+    font-size:.95rem;
+
+    color:var(--text-muted);
+
+}
+
+
+
+/* Close button */
+
+
+.menu-close{
+
+    position:absolute;
+
+    top:25px;
+
+    right:25px;
+
+
+    border:none;
+
+    background:none;
+
+
+    font-size:2rem;
+
+    cursor:pointer;
+
+}
+
+
+
+/* =========================================================
+   MENU OVERLAY
+========================================================= */
+
+
+.menu-overlay{
+
+    position:fixed;
+
+    inset:0;
+
+
+    background:
+
+    rgba(0,0,0,.45);
+
+
+    opacity:0;
+
+    pointer-events:none;
+
+
+    transition:
+    .3s ease;
+
+
+    z-index:1100;
+
+}
+
+
+
+.menu-overlay.active{
+
+    opacity:1;
+
+    pointer-events:auto;
+
+}
+
+
+
+/* =========================================================
+   BUTTON SYSTEM
+========================================================= */
+
+
+.btn{
+
+
+    display:inline-flex;
+
+
+    align-items:center;
+
+    justify-content:center;
+
+
+    padding:
+    15px 32px;
+
+
+    border-radius:
+    999px;
+
+
+    background:
+    var(--brand-primary);
+
+
+    color:white;
+
+
+    font-size:1rem;
+
+
+    font-weight:800;
+
+
+    letter-spacing:-.01em;
+
+
+    transition:
+    var(--transition);
+
+
+    box-shadow:
+
+    0 12px 30px rgba(11,102,35,.25);
+
+}
+
+
+
+.btn:hover{
+
+
+    background:
+    var(--brand-primary-dark);
+
+
+    transform:
+    translateY(-3px);
+
+
+    box-shadow:
+
+    0 18px 40px rgba(11,102,35,.35);
+
+}
+
+
+
+/* =========================================================
+   PART 2
+   HERO
+   TRUST BAR
+   LOCAL TRUST
+   CONTENT SECTIONS
+========================================================= */
+
+
+
+/* =========================================================
+   HERO SECTION
+========================================================= */
+
+
+.hero{
+
+    position:relative;
+
+    min-height:900px;
+
+    display:flex;
+
+    align-items:center;
+
+    overflow:hidden;
+
+    isolation:isolate;
+
+}
+
+
+
+.hero-bg{
+
+    position:absolute;
+
+    inset:0;
+
+
+    width:100%;
+
+    height:100%;
+
+
+    object-fit:cover;
+
+
+    z-index:-2;
+
+}
+
+
+
+.hero-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+
+    background:
+
+    linear-gradient(
+
+        90deg,
+
+        rgba(0,0,0,.72),
+
+        rgba(0,0,0,.35)
+
+    );
+
+
+    z-index:-1;
+
+}
+
+
+
+.hero-content{
+
+
+    max-width:760px;
+
+
+    padding-top:100px;
+
+
+}
+
+
+
+.hero h1{
+
+
+    color:white;
+
+
+    margin-bottom:30px;
+
+
+    text-wrap:balance;
+
+
+}
+
+
+
+.hero p{
+
+
+    color:
+
+    rgba(255,255,255,.88);
+
+
+    font-size:
+
+    clamp(1.05rem,2vw,1.25rem);
+
+
+    max-width:650px;
+
+
+    margin-bottom:18px;
+
+
+}
+
+
+
+.hero .btn{
+
+    margin-top:25px;
+
+}
+
+
+
+/* =========================================================
+   TRUST BAR
+========================================================= */
+
+
+.trust-bar{
+
+
+    width:min(92%,1100px);
+
+
+    margin:-60px auto 0;
+
+
+    position:relative;
+
+
+    z-index:5;
+
+
+    background:white;
+
+
+    border-radius:
+
+    var(--radius-lg);
+
+
+    padding:
+
+    30px 40px;
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+    repeat(4,1fr);
+
+
+    gap:25px;
+
+
+    box-shadow:
+
+    var(--shadow-md);
+
+
+}
+
+
+
+.trust-item{
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+    text-align:center;
+
+
+    font-weight:750;
+
+
+    color:
+
+    var(--text-main);
+
+
+    font-size:.95rem;
+
+
+}
+
+
+
+.trust-item::first-letter{
+
+
+    color:
+
+    var(--brand-primary);
+
+}
+
+
+
+/* =========================================================
+   LOCAL TRUST SECTION
+========================================================= */
+
+
+.local-trust-section{
+
+
+    padding:
+
+    110px 0 80px;
+
+
+}
+
+
+
+.local-trust-section h2{
+
+
+    text-align:center;
+
+
+}
+
+
+
+.trust-stars{
+
+
+    text-align:center;
+
+
+    color:
+
+    #D99A00;
+
+
+    font-size:2rem;
+
+
+    letter-spacing:5px;
+
+
+    margin-bottom:45px;
+
+
+}
+
+
+
+/* Location Grid */
+
+
+.local-grid{
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+    repeat(3,1fr);
+
+
+    gap:20px;
+
+
+}
+
+
+
+.location-box{
+
+
+    background:white;
+
+
+    padding:
+
+    28px 20px;
+
+
+    border-radius:
+
+    var(--radius-md);
+
+
+    text-align:center;
+
+
+    font-weight:800;
+
+
+    color:
+
+    var(--brand-primary);
+
+
+    border:
+
+    1px solid var(--border-soft);
+
+
+    box-shadow:
+
+    var(--shadow-sm);
+
+
+    transition:
+
+    var(--transition);
+
+}
+
+
+
+.location-box:hover{
+
+
+    transform:
+
+    translateY(-5px);
+
+
+    box-shadow:
+
+    var(--shadow-md);
+
+
+}
+
+
+
+/* =========================================================
+   GENERAL CONTENT SECTIONS
+========================================================= */
+
+
+.section > .container > h2{
+
+
+    max-width:
+
+    850px;
+
+
+}
+
+
+
+.section > .container > p{
+
+
+    margin-bottom:22px;
+
+
+}
+
+
+
+.section .btn{
+
+
+    margin-top:20px;
+
+
+}
+
+
+
+/* =========================================================
+   PROCESS / SERVICE IMAGE GRID
+========================================================= */
+
+
+.process-grid{
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+    repeat(3,1fr);
+
+
+    gap:30px;
+
+
+    margin-top:50px;
+
+
+}
+
+
+
+.process-card{
+
+
+    background:white;
+
+
+    border-radius:
+
+    var(--radius-lg);
+
+
+    overflow:hidden;
+
+
+    box-shadow:
+
+    var(--shadow-sm);
+
+
+    border:
+
+    1px solid rgba(0,0,0,.06);
+
+
+    transition:
+
+    var(--transition);
+
+
+}
+
+
+
+.process-card:hover{
+
+
+    transform:
+
+    translateY(-8px);
+
+
+    box-shadow:
+
+    var(--shadow-md);
+
+
+}
+
+
+
+.process-card img{
+
+
+    width:100%;
+
+
+    height:240px;
+
+
+    object-fit:cover;
+
+
+}
+
+
+
+.process-card h3{
+
+
+    padding:
+
+    25px 25px 10px;
+
+
+}
+
+
+
+.process-card p{
+
+
+    padding:
+
+    0 25px 30px;
+
+
+}
+
+
+
+/* =========================================================
+   GENERIC CARD SYSTEM
+========================================================= */
+
+
+.card{
+
+
+    background:white;
+
+
+    border-radius:
+
+    var(--radius-lg);
+
+
+    padding:40px;
+
+
+    box-shadow:
+
+    var(--shadow-sm);
+
+
+    border:
+
+    1px solid rgba(0,0,0,.06);
+
+
+}
+
+
+
+/* =========================================================
+   IMAGE FEATURE SECTIONS
+========================================================= */
+
+
+.image-overlay-section{
+
+
+    position:relative;
+
+
+    min-height:
+
+    600px;
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    overflow:hidden;
+
+
+}
+
+
+
+.section-bg-image{
+
+
+    position:absolute;
+
+
+    inset:0;
+
+
+    width:100%;
+
+
+    height:100%;
+
+
+    object-fit:cover;
+
+
+}
+
+
+
+.section-bg-overlay{
+
+
+    position:absolute;
+
+
+    inset:0;
+
+
+    background:
+
+    linear-gradient(
+
+        90deg,
+
+        rgba(0,0,0,.75),
+
+        rgba(0,0,0,.35)
+
+    );
+
+
+}
+
+
+
+.section-overlay-content{
+
+
+    position:relative;
+
+
+    z-index:2;
+
+
+}
+
+
+
+.section-overlay-content h2{
+
+
+    color:white;
+
+
+}
+
+
+
+.section-overlay-content p{
+
+
+    color:
+
+    rgba(255,255,255,.88);
+
+
+}
+
+
+
+/* =========================================================
+   WHY US SECTION
+========================================================= */
+
+
+.why-us-section{
+
+
+    background:
+
+    rgba(255,255,255,.35);
+
+
+}
+
+
+
+.why-us-container{
+
+
+    background:white;
+
+
+    padding:
+
+    50px;
+
+
+    border-radius:
+
+    var(--radius-lg);
+
+
+    box-shadow:
+
+    var(--shadow-sm);
+
+
+}
+
+
+
+.why-us-list{
+
+
+    padding:0;
+
+
+    margin:0;
+
+
+    list-style:none;
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+    repeat(2,1fr);
+
+
+    gap:18px;
+
+
+}
+
+
+
+.why-us-list li{
+
+
+    padding:
+
+    18px;
+
+
+    background:
+
+    var(--brand-bg);
+
+
+    border-radius:
+
+    var(--radius-sm);
+
+
+    font-weight:700;
+
+
+}
+
+
+.why-us-list li::before{
+
+    content:"✓";
+    color:
+    var(--brand-primary);
+    margin-right:10px;
+    font-weight:900;
+
+}
+
+
