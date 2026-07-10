@@ -1625,3 +1625,74 @@ border-bottom:none;
 .side-menu details a:hover{
 padding-left:22px;
 }
+
+
+
+/* =========================================
+FLOATING CALL CTA
+========================================= */
+
+.call-cta{
+position:fixed;
+top:50%;
+right:-165px;
+transform:translateY(-50%);
+
+z-index:999;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+width:230px;
+height:54px;
+
+background:#0B6623;
+color:#fff;
+
+font-weight:700;
+font-size:.95rem;
+
+text-decoration:none;
+
+border-radius:12px 0 0 12px;
+
+box-shadow:0 12px 30px rgba(0,0,0,.16);
+
+transition:right .25s ease;
+}
+
+.call-cta:hover{
+right:0;
+}
+
+@media (max-width:768px){
+
+.call-cta{
+
+top:auto;
+bottom:18px;
+
+left:50%;
+right:auto;
+
+transform:translateX(-50%);
+
+width:90%;
+max-width:360px;
+
+height:52px;
+
+border-radius:12px;
+
+font-size:.9rem;
+
+}
+
+.call-cta:hover{
+
+right:auto;
+
+}
+
+}
