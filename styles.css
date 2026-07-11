@@ -399,46 +399,25 @@ background:
 
 
 .btn{
-
-
     display:inline-flex;
-
-
     align-items:center;
-
     justify-content:center;
-
-
     padding:
     15px 32px;
-
+    margin-bottom: 75px;
 
     border-radius:
     999px;
 
-
     background:
     var(--brand-primary);
-
-
     color:white;
-
-
     font-size:1rem;
-
-
     font-weight:800;
-
-
     letter-spacing:-.01em;
-
-
     transition:
     var(--transition);
-
-
     box-shadow:
-
     0 12px 30px rgba(11,102,35,.25);
 
 }
@@ -446,18 +425,11 @@ background:
 
 
 .btn:hover{
-
-
     background:
     var(--brand-primary-dark);
-
-
     transform:
     translateY(-3px);
-
-
     box-shadow:
-
     0 18px 40px rgba(11,102,35,.35);
 
 }
@@ -465,32 +437,16 @@ background:
 
 
 /* =========================================================
-   PART 2
-   HERO
-   TRUST BAR
-   LOCAL TRUST
-   CONTENT SECTIONS
-========================================================= */
-
-
-
-/* =========================================================
    HERO SECTION
 ========================================================= */
-
 
 .hero{
 
     position:relative;
-
     min-height:900px;
-
     display:flex;
-
     align-items:center;
-
     overflow:hidden;
-
     isolation:isolate;
 
 }
@@ -607,84 +563,55 @@ background:
 /* =========================================================
    TRUST BAR
 ========================================================= */
-
-
 .trust-bar{
 
-
     width:min(92%,1100px);
-
-
     margin:-60px auto 0;
 
-
     position:relative;
-
-
     z-index:5;
-
-
     background:white;
-
-
     border-radius:
-
     var(--radius-lg);
-
-
     padding:
-
     30px 40px;
-
-
     display:grid;
-
-
     grid-template-columns:
-
     repeat(4,1fr);
-
-
     gap:25px;
-
-
     box-shadow:
-
     var(--shadow-md);
-
-
 }
 
+@media(max-width:768px) {
 
+ .trust-bar{
+   padding-left: 8px;
+   padding-right: 8px;
+   padding-top: 20px;
+   padding-bottom: 20px;
+  
+ }
+
+}
 
 .trust-item{
-
-
     display:flex;
-
-
     align-items:center;
-
-
     justify-content:center;
-
-
     text-align:center;
-
-
     font-weight:750;
-
-
     color:
-
     var(--text-main);
-
-
     font-size:.95rem;
-
-
 }
 
+@media(max-width: 768px){
+
+    .trust-item{
+        font-size: 14px;
+    }
+}
 
 
 .trust-item::first-letter{
