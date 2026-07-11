@@ -609,7 +609,8 @@ background:
 @media(max-width: 768px){
 
     .trust-item{
-        font-size: 14px;
+        font-size: 13px;
+
     }
 }
 
@@ -1622,4 +1623,11 @@ right:auto;
 
 }
 
+}
+
+/* Internal linking */
+.internal-linking{
+    color: #04f104;
+    font-weight: 600;
+    
 }
