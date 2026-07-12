@@ -1629,5 +1629,8 @@ right:auto;
 .internal-linking{
     color: #04f104;
     font-weight: 600;
-    
+}
+
+.btm-cta{
+    text-align: center;
 }
