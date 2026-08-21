@@ -603,7 +603,10 @@ background:
 @media(max-width: 768px){
 
     .trust-item{
-        font-size: 12px;
+        font-size: 11px;
+        margin: 0px;
+        
+       
       
     }
 }
