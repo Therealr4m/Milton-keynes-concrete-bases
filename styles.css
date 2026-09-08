@@ -1591,36 +1591,33 @@ transition:right .25s ease;
 right:0;
 }
 
-@media (max-width:768px){
+ @media (max-width:768px){
 
-.call-cta{
+  .call-cta{
+    top:auto;
+    bottom:14px;
+    left:auto;
+    right:14px;
 
-top:auto;
-bottom:18px;
+    transform:none;
+    width:calc(50% - 21px);
+    max-width:none;
+    height:52px;
 
-left:50%;
-right:auto;
+    border-radius:12px;
+    font-size:.85rem;
+  }
 
-transform:translateX(-50%);
+  .call-cta:hover{
+    right:14px;
+    transform:none;
+  }
 
-width:90%;
-max-width:360px;
-
-height:52px;
-
-border-radius:12px;
-
-font-size:.9rem;
-
+  .call-cta:active{
+    transform:scale(.97);
+  }
 }
 
-.call-cta:hover{
-
-right:auto;
-
-}
-
-}
 
 /* Internal linking */
 .internal-linking{
@@ -1732,8 +1729,6 @@ border-color:var(--brand-primary);
 
 }
 
-
-
 @media(max-width:768px){
 
 .contact-grid{
@@ -1743,4 +1738,127 @@ grid-template-columns:1fr;
 }
 
 }
+
+
+
+
+
+/* =========================================
+   WHATSAPP CTA
+========================================= */
+
+.whatsapp-cta{
+  position:fixed;
+  left:20px;
+  bottom:20px;
+
+  z-index:998;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+
+  width:145px;
+  height:54px;
+
+  background:#25D366;
+  color:#fff;
+
+  font-weight:700;
+  font-size:.9rem;
+
+  text-decoration:none;
+
+  border-radius:12px;
+
+  box-shadow:0 12px 30px rgba(0,0,0,.14);
+
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease;
+}
+
+.whatsapp-cta:hover{
+  transform:translateY(-2px);
+  box-shadow:0 15px 34px rgba(0,0,0,.18);
+}
+
+.whatsapp-icon{
+  width:21px;
+  height:21px;
+  fill:currentColor;
+  flex-shrink:0;
+}
+
+
+/* =========================================
+   MOBILE CTA LAYOUT
+========================================= */
+
+@media (max-width:768px){
+
+  .whatsapp-cta{
+    left:14px;
+    bottom:14px;
+
+    width:calc(50% - 21px);
+    max-width:none;
+
+    height:52px;
+
+    border-radius:12px;
+
+    font-size:.85rem;
+
+    box-shadow:0 8px 24px rgba(0,0,0,.16);
+
+    transition:box-shadow .2s ease;
+  }
+
+  .whatsapp-cta:hover{
+    transform:none;
+    box-shadow:0 8px 24px rgba(0,0,0,.16);
+  }
+
+  .whatsapp-cta:active{
+    transform:scale(.97);
+  }
+
+  .whatsapp-icon{
+    width:20px;
+    height:20px;
+  }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width:380px){
+
+  .whatsapp-cta{
+    left:12px;
+    bottom:12px;
+
+    width:calc(50% - 18px);
+
+    height:48px;
+
+    border-radius:10px;
+
+    font-size:.78rem;
+  }
+
+  .whatsapp-icon{
+    width:19px;
+    height:19px;
+  }
+
+}
+
+
+
 
