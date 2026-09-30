@@ -1762,6 +1762,9 @@ grid-template-columns:1fr;
   justify-content:center;
   gap:8px;
 
+  padding: 3 6px;
+  padding-bottom: 2px;
+
   width:145px;
   height:54px;
 
@@ -1805,12 +1808,13 @@ grid-template-columns:1fr;
     left:14px;
     bottom:14px;
 
+    padding: 2px;
     width:calc(50% - 21px);
     max-width:none;
 
     height:52px;
 
-    border-radius:12px;
+    border-radius:15px;
 
     font-size:.85rem;
 
