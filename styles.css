@@ -555,73 +555,6 @@ background:
 
 
 
-/* =========================================================
-   TRUST BAR
-========================================================= */
-.trust-bar{
-
-    width:min(92%,1100px);
-    margin:-60px auto 0;
-
-    position:relative;
-    z-index:5;
-    background:white;
-    border-radius:
-    var(--radius-lg);
-    padding:
-    30px 40px;
-    display:grid;
-    grid-template-columns:
-    repeat(4,1fr);
-    gap:25px;
-    box-shadow:
-    var(--shadow-md);
-}
-
-@media(max-width:768px) {
-
- .trust-bar{
-   padding-left: 8px;
-   padding-right: 8px;
-   padding-top: 20px;
-   padding-bottom: 20px;
-  
- }
-
-}
-
-.trust-item{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    font-weight:750;
-    color:
-    var(--text-main);
-    font-size:.95rem;
-}
-
-@media(max-width: 768px){
-
-    .trust-item{
-        font-size: 11px;
-        margin: 0px;
-        
-       
-      
-    }
-}
-
-
-.trust-item::first-letter{
-
-
-    color:
-
-    var(--brand-primary);
-
-}
-
 
 
 /* =========================================================
@@ -1878,3 +1811,166 @@ grid-template-columns:1fr;
     font-size: 13.5px;
   }
 }
+
+/* =========================================
+   PREMIUM TRUST BAR
+   Clean • Established • Responsive
+   ========================================= */
+
+.trust-bar {
+    width: 100%;
+    max-width: var(--container);
+    margin: 28px auto 36px;
+    padding: 0 24px;
+
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+
+    box-sizing: border-box;
+}
+
+/* TRUST ITEMS */
+
+.trust-item {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 0;
+    min-height: 72px;
+
+    padding: 16px 18px;
+
+    background: var(--brand-white);
+    border: 1px solid var(--border-soft);
+    border-radius: var(--radius-sm);
+
+    box-shadow: 0 4px 16px rgba(0, 0, 0, .035);
+
+    color: var(--text-main);
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.5;
+    text-align: center;
+
+    overflow-wrap: anywhere;
+    box-sizing: border-box;
+
+    transition: var(--transition);
+}
+
+/* SUBTLE BRAND ACCENT */
+
+.trust-item::before {
+    content: "";
+    position: absolute;
+
+    top: 0;
+    left: 18px;
+    right: 18px;
+
+    height: 2px;
+
+    background: var(--brand-primary);
+    border-radius: 0 0 4px 4px;
+
+    opacity: .75;
+}
+
+/* HOVER */
+
+@media (hover: hover) {
+
+    .trust-item:hover {
+        border-color: rgba(11, 102, 35, .25);
+        box-shadow: var(--shadow-sm);
+        transform: translateY(-2px);
+    }
+
+}
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    .trust-bar {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .trust-item {
+        min-height: 66px;
+        padding: 14px 16px;
+        font-size: 12.5px;
+    }
+
+}
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 480px) {
+
+    .trust-bar {
+        width: 100%;
+        max-width: 100%;
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+
+        margin: 20px auto 26px;
+        padding: 0 14px;
+    }
+
+    .trust-item {
+        min-width: 0;
+        min-height: 76px;
+
+        padding: 14px 10px;
+
+        font-size: 11.5px;
+        font-weight: 600;
+        line-height: 1.45;
+
+        border-radius: 8px;
+
+        overflow-wrap: anywhere;
+        word-break: normal;
+    }
+
+    .trust-item::before {
+        left: 12px;
+        right: 12px;
+    }
+
+}
+
+/* =========================================
+   VERY SMALL MOBILE
+   ========================================= */
+
+@media (max-width: 340px) {
+
+    .trust-bar {
+        grid-template-columns: 1fr;
+    }
+
+    .trust-item {
+        min-height: 52px;
+        padding: 12px 14px;
+        font-size: 12px;
+    }
+
+}
+
+
+
+
+
+
