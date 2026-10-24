@@ -1969,8 +1969,42 @@ grid-template-columns:1fr;
 
 }
 
+/* =========================================================
+   MILTON KEYNES BRAND LOGO
+   Logo alignment only; original navigation and layout retained.
+========================================================= */
+.site-header .site-brand {
+  min-width: 0;
+}
 
+.site-header .site-brand a {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  line-height: 1.2;
+  text-decoration: none;
+}
 
+.site-header .site-brand .mk-header-logo {
+  width: 56px;
+  height: 56px;
+  flex: 0 0 56px;
+  display: block;
+  object-fit: cover;
+  border-radius: 10px;
+  background: #161919;
+}
 
+@media (max-width: 480px) {
+  .site-header .site-brand a {
+    gap: 9px;
+    font-size: clamp(0.78rem, 3.3vw, 1rem);
+  }
 
-
+  .site-header .site-brand .mk-header-logo {
+    width: 44px;
+    height: 44px;
+    flex-basis: 44px;
+    border-radius: 8px;
+  }
+}
