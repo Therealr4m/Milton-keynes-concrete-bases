@@ -2192,3 +2192,403 @@ grid-template-columns:1fr;
     font-size: 0.85rem;
   }
 }
+
+
+
+
+
+
+
+
+/* =========================================================
+   CONCRETE BASE PROJECT PLANNER
+   PREMIUM GREEN THEME
+========================================================= */
+
+.cbp-planner {
+    padding: 75px 20px;
+    background: #f5f8f5;
+    color: var(--text-main);
+}
+
+.cbp-container {
+    max-width: 780px;
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.cbp-heading {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.cbp-eyebrow {
+    display: inline-block;
+    margin-bottom: 13px;
+    color: var(--brand-primary);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.cbp-heading h2 {
+    margin: 0 0 14px;
+    color: var(--text-main);
+    font-size: clamp(27px, 4vw, 38px);
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -.7px;
+}
+
+.cbp-heading p {
+    max-width: 570px;
+    margin: 0 auto;
+    color: var(--text-muted);
+    font-size: 15px;
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   MAIN PANEL
+========================================================= */
+
+.cbp-panel {
+    padding: 35px;
+    background: var(--brand-white);
+    border: 1px solid var(--border-soft);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.cbp-form {
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+}
+
+.cbp-field-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.cbp-field {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.cbp-field label {
+    color: var(--text-main);
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   INPUTS & SELECTS
+========================================================= */
+
+.cbp-field input,
+.cbp-field select {
+    width: 100%;
+    min-width: 0;
+    min-height: 52px;
+    padding: 13px 15px;
+    background: #fbfcfb;
+    border: 1px solid #d7e1d9;
+    border-radius: var(--radius-sm);
+    color: var(--text-main);
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 1.4;
+    outline: none;
+    box-sizing: border-box;
+    transition:
+        border-color .25s ease,
+        box-shadow .25s ease,
+        background .25s ease;
+}
+
+.cbp-field input::placeholder {
+    color: #939e96;
+}
+
+.cbp-field input:hover,
+.cbp-field select:hover {
+    border-color: rgba(11, 102, 35, .35);
+}
+
+.cbp-field input:focus,
+.cbp-field select:focus {
+    background: var(--brand-white);
+    border-color: var(--brand-primary);
+    box-shadow: 0 0 0 4px rgba(11, 102, 35, .10);
+}
+
+
+/* =========================================================
+   CALCULATE BUTTON
+========================================================= */
+
+.cbp-submit {
+    width: 100%;
+    min-height: 56px;
+    margin-top: 5px;
+    padding: 15px 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    background: var(--brand-primary);
+    border: 1px solid var(--brand-primary);
+    border-radius: var(--radius-sm);
+
+    color: var(--text-light);
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 750;
+    line-height: 1.4;
+
+    cursor: pointer;
+
+    transition:
+        background .25s ease,
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+.cbp-submit:hover {
+    background: var(--brand-primary-dark);
+    border-color: var(--brand-primary-dark);
+    box-shadow: 0 8px 22px rgba(11, 102, 35, .16);
+    transform: translateY(-2px);
+}
+
+.cbp-submit:active {
+    transform: translateY(0);
+}
+
+.cbp-submit:focus-visible {
+    outline: 3px solid var(--brand-primary-light);
+    outline-offset: 3px;
+}
+
+.cbp-submit span {
+    font-size: 20px;
+    line-height: 1;
+}
+
+.cbp-form-note {
+    margin: -7px 0 0;
+    color: #77847a;
+    font-size: 12px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   RESULTS CONTAINER
+========================================================= */
+
+.cbp-results {
+    margin-top: 34px;
+    padding-top: 30px;
+    border-top: 1px solid var(--border-soft);
+}
+
+.cbp-results[hidden] {
+    display: none;
+}
+
+.cbp-results h3 {
+    margin: 0 0 9px;
+    color: var(--text-main);
+    font-size: 23px;
+    font-weight: 800;
+    line-height: 1.3;
+}
+
+.cbp-result-intro {
+    margin: 0 0 23px;
+    color: var(--text-muted);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   RESULT STAT CARDS
+========================================================= */
+
+.cbp-stats {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+    margin-bottom: 28px;
+}
+
+.cbp-stat {
+    padding: 21px;
+    background: #f2f8f3;
+    border: 1px solid #e0ece2;
+    border-top: 3px solid var(--brand-primary);
+    border-radius: var(--radius-md);
+}
+
+.cbp-stat-label {
+    display: block;
+    margin-bottom: 10px;
+    color: #52665a;
+    font-size: 12px;
+    font-weight: 650;
+    line-height: 1.5;
+}
+
+.cbp-stat-value {
+    display: block;
+    color: var(--brand-primary);
+    font-size: clamp(19px, 3vw, 28px);
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -.5px;
+    overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   PROJECT ADVICE
+========================================================= */
+
+.cbp-advice-title {
+    margin: 0 0 15px;
+    color: var(--text-main);
+    font-size: 18px;
+    font-weight: 750;
+    line-height: 1.4;
+}
+
+.cbp-advice-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.cbp-advice-list li {
+    padding: 15px 17px;
+    background: #f8faf8;
+    border: 1px solid #edf1ed;
+    border-left: 3px solid var(--brand-primary);
+    border-radius: 8px;
+
+    color: #37483b;
+    font-size: 13px;
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   DISCLAIMER
+========================================================= */
+
+.cbp-disclaimer {
+    margin: 22px 0 0;
+    padding-top: 16px;
+    border-top: 1px solid #edf1ed;
+    color: #768178;
+    font-size: 11px;
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .cbp-planner {
+        padding: 50px 15px;
+    }
+
+    .cbp-heading {
+        margin-bottom: 25px;
+    }
+
+    .cbp-heading h2 {
+        font-size: 29px;
+    }
+
+    .cbp-heading p {
+        font-size: 14px;
+    }
+
+    .cbp-panel {
+        padding: 24px 19px;
+        border-radius: var(--radius-md);
+    }
+
+    .cbp-form {
+        gap: 19px;
+    }
+
+    .cbp-field-row {
+        grid-template-columns: 1fr;
+        gap: 19px;
+    }
+
+    .cbp-stats {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .cbp-stat {
+        padding: 19px;
+    }
+
+    .cbp-stat-value {
+        font-size: 26px;
+    }
+
+    .cbp-results h3 {
+        font-size: 21px;
+    }
+
+    .cbp-advice-list li {
+        padding: 13px 14px;
+    }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .cbp-submit,
+    .cbp-field input,
+    .cbp-field select {
+        transition: none;
+    }
+
+    .cbp-submit:hover {
+        transform: none;
+    }
+
+}
+
+
+
+
+
